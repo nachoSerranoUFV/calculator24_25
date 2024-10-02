@@ -24,20 +24,27 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int choice = scanner.nextInt();
-
+        int a, b;
         switch (choice) {
             case 1:
                 System.out.println("Enter first number: ");
-                int a = scanner.nextInt();
+                a = scanner.nextInt();
                 System.out.println("Enter second number: ");
-                int b = scanner.nextInt();
+                b = scanner.nextInt();
                 System.out.println(operators.add(a, b));
+                menu();
+                break;
+            case 2:
+                System.out.println("Enter first number: ");
+                a = scanner.nextInt();
+                System.out.println("Enter second number: ");
+                b = scanner.nextInt();
+                System.out.println(operators.subtract(a, b));
                 menu();
                 break;
             case 0:
                 System.out.println("Exiting...");
                 break;
-        }
 
     }
 }
