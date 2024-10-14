@@ -17,7 +17,9 @@ public class Main {
         System.out.println("2. Subtract");
         System.out.println("3. Multiply");
         System.out.println("4. Divide");
-        System.out.println("5. Exit");
+        System.out.println("5. Square");
+
+        System.out.println("6. Exit");
 
         System.out.println("Enter your choice: ");
 
@@ -50,10 +52,26 @@ public class Main {
                 System.out.println("El resultado de la multiplicación es: " + operators.multiply(a, b));
                 menu();
                 break;
-            case 0:
-                System.out.println("Exiting...");
+            case 4:
+                System.out.println("Enter first number: ");
+                a = scanner.nextInt();
+                System.out.println("Enter second number: ");
+                b = scanner.nextInt();
+                System.out.println("El resultado de la división es: " + operators.divide(a, b));
+                menu();
                 break;
-
+            case 5:
+                System.out.println("Enter a number: ");
+                a = scanner.nextInt();
+                System.out.println("El resultado de elevar al cuadrado es: " + operators.square(a));
+                menu();
+                break;
+            case 6:
+                System.out.println("Goodbye!");
+                break;
+            default:
+                System.out.println("Invalid choice");
+                menu();
         }
     }
 }
